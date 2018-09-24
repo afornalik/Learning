@@ -6,7 +6,6 @@ public class GetOrder {
 
 
     Date orderDate = new Date();
-    ArrayList<book> book = new ArrayList<book>;
 
     public GetOrder() {
 
