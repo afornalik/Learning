@@ -1,7 +1,6 @@
 package main.java.com.testapp.afor.store.items;
 
-import main.java.com.testapp.afor.store.items.brush.StoreBrush;
-import main.java.com.testapp.afor.store.items.roller.StoreRoller;
+import main.java.com.testapp.afor.store.items.interfacePackage.StoreItems;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
@@ -43,14 +42,31 @@ public class TestStore {
 
     public static void main (String[] args) {
 
-        StoreBrush sb = new StoreBrush();
+        FactoryStore factorystore = new FactoryStore();
+
+        StoreItems storeitems = factorystore.getitems("roller");
+        StoreItems storeitems2 = factorystore.getitems("brush");
+
+        for (String names :storeitems.getAllNames()) {
+            System.out.print(names+ "  |  ");
+        }
+        System.out.println();
+        for (String names :storeitems2.getAllNames()) {
+            System.out.print(names+ "  |  ");
+
+        }
+
+
+
+
+      /*  StoreBrush sb = new StoreBrush();
 
         sb.compareName("A63");
         sb.setCode(4005);
         sb.setSize(63);
 
         System.out.println(sb.getName()+" "+sb.getSize()+"mm  "+sb.getCode());
-
+        */
 
 
 

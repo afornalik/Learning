@@ -1,4 +1,4 @@
-package main.java.com.testapp.afor.store.items;
+package main.java.com.testapp.afor.store.items.interfacePackage;
 
 public interface StoreItems {
 

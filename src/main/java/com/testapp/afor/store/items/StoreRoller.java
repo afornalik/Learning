@@ -1,4 +1,7 @@
-package main.java.com.testapp.afor.store.items.roller;
+package main.java.com.testapp.afor.store.items;
+
+import main.java.com.testapp.afor.store.items.interfacePackage.StoreItemsRoller;
+import main.java.com.testapp.afor.store.items.roller.RollerName;
 
 public class StoreRoller   implements StoreItemsRoller {
 
@@ -9,6 +12,9 @@ public class StoreRoller   implements StoreItemsRoller {
 
     @Override
     public void compareName(String tempname) {
+
+
+
 
         for (RollerName rn : RollerName.values()){
             if(tempname.equalsIgnoreCase(rn.toString())) {
@@ -23,7 +29,13 @@ public class StoreRoller   implements StoreItemsRoller {
 
     @Override
     public  String[] getAllNames() {
-        return new String[0];
+       String[] names = new String[RollerName.values().length];
+       int i = 0;
+       for(RollerName rn : RollerName.values()) {
+           names[i] = rn.toString();
+           i++;
+       }
+       return names;
     }
 
     @Override

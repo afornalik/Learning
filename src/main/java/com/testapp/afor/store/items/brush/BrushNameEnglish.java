@@ -4,7 +4,7 @@ public enum BrushNameEnglish {
 
 
 
-    A25,A36,A50,A63,A76,A90,A102;
+    A25,A36,A50,A63,A76,A90,A102
 
 
 }

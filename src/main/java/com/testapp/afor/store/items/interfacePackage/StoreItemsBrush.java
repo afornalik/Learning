@@ -1,6 +1,4 @@
-package main.java.com.testapp.afor.store.items.brush;
-
-import main.java.com.testapp.afor.store.items.StoreItems;
+package main.java.com.testapp.afor.store.items.interfacePackage;
 
 public interface StoreItemsBrush extends StoreItems {
 

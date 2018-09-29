@@ -1,10 +1,15 @@
-package main.java.com.testapp.afor.store.items.brush;
+package main.java.com.testapp.afor.store.items;
+
+import main.java.com.testapp.afor.store.items.brush.*;
+import main.java.com.testapp.afor.store.items.interfacePackage.StoreItemsBrush;
 
 public class StoreBrush implements StoreItemsBrush {
 
-    private String[] allnames = new String[BrushNameEnglish.values().length+BrushNameHalfEnglish.values().length+BrushNameRadiator.values().length+BrushNameVarnished.values().length+BrushNameWallpapers.values().length+BrushNameWide.values().length+7];
+    private String[] allnames = new String[BrushNameEnglish.values().length+ BrushNameHalfEnglish.values().length+ BrushNameRadiator.values().length+ BrushNameVarnished.values().length+ BrushNameWallpapers.values().length+BrushNameWide.values().length];
     private String name;
     private int code,size;
+
+
 
 
     @Override
@@ -29,7 +34,6 @@ public class StoreBrush implements StoreItemsBrush {
             ++i;
         }
 
-
         for (BrushNameRadiator bnr: BrushNameRadiator.values()){
 
             allnames[i] = bnr.toString();
@@ -43,23 +47,17 @@ public class StoreBrush implements StoreItemsBrush {
             ++i;
         }
 
-        for (BrushNameEnglish bne: BrushNameEnglish.values()){
-
-            allnames[i] = bne.toString();
-            ++i;
-        }
-
         for (BrushNameWallpapers bnwp: BrushNameWallpapers.values()){
 
             allnames[i] = bnwp.toString();
             ++i;
         }
 
-
         for (BrushNameWide bnw: BrushNameWide.values()){
 
             allnames[i] = bnw.toString();
             ++i;
+
         }
 
 
@@ -90,9 +88,11 @@ public class StoreBrush implements StoreItemsBrush {
     public void compareName(String name) {
         this.getAllNames();
         for (String an : allnames) {
-            System.out.println(an+"    "+name);
-            if (an.toLowerCase().equals(name.toLowerCase())==true) {
+
+
+            if (an.toLowerCase().equals(name.toLowerCase())) {
                 this.name = name;
+                break;
             } else {
                 this.name = "some kind of brush";
             }
@@ -104,3 +104,5 @@ public class StoreBrush implements StoreItemsBrush {
         return this.name;
     }
 }
+
+
